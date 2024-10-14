@@ -10,41 +10,51 @@
 
 <body class="bg-gray-100 flex items-center justify-center min-h-screen">
     <div class="bg-white rounded-lg shadow-lg p-6 w-96">
-        <h2 class="text-2xl font-bold mb-4">Bé tập tính</h2>
+        <h2 class="text-2xl font-bold mb-4 text-center">Bé tập tính</h2>
 
-        <div class="mb-4">
-            <label for="firstNumber" class="block text-gray-700">Số thứ nhất:</label>
-            <input type="text" id="firstNumber" class="border rounded px-2 py-1 w-full" />
-        </div>
+        <div class="grid grid-cols-2 gap-4 mb-4">
+            <div>
+                <div class="mb-2"> <!-- Thêm mb-2 để giảm khoảng cách -->
+                    <label for="firstNumber" class="block text-gray-700">Số thứ nhất:</label>
+                    <input type="text" id="firstNumber" class="border rounded px-2 py-1 w-full" />
+                </div>
 
-        <div class="mb-4">
-            <label for="secondNumber" class="block text-gray-700">Số thứ hai:</label>
-            <input type="text" id="secondNumber" class="border rounded px-2 py-1 w-full" />
-        </div>
+                <div>
+                    <label for="secondNumber" class="block text-gray-700">Số thứ hai:</label>
+                    <input type="text" id="secondNumber" class="border rounded px-2 py-1 w-full" />
+                </div>
 
-        <div class="mb-4">
-            <label class="block text-gray-700">Phép toán:</label>
-            <div class="flex items-center">
-                <input type="radio" id="add" name="operation" value="add" class="mr-2">
-                <label for="add" class="mr-4">+</label>
+            </div>
 
-                <input type="radio" id="subtract" name="operation" value="subtract" class="mr-2">
-                <label for="subtract" class="mr-4">-</label>
-
-                <input type="radio" id="multiply" name="operation" value="multiply" class="mr-2">
-                <label for="multiply" class="mr-4">*</label>
-
-                <input type="radio" id="divide" name="operation" value="divide" class="mr-2">
-                <label for="divide">:</label>
+            <div class="mb-4">
+                <label class="block text-gray-700">Phép toán:</label>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="flex items-center">
+                        <input type="radio" id="add" name="operation" value="add" class="mr-2">
+                        <label for="add">+</label>
+                    </div>
+                    <div class="flex items-center">
+                        <input type="radio" id="subtract" name="operation" value="subtract" class="mr-2">
+                        <label for="subtract">-</label>
+                    </div>
+                    <div class="flex items-center">
+                        <input type="radio" id="multiply" name="operation" value="multiply" class="mr-2">
+                        <label for="multiply">*</label>
+                    </div>
+                    <div class="flex items-center">
+                        <input type="radio" id="divide" name="operation" value="divide" class="mr-2">
+                        <label for="divide">:</label>
+                    </div>
+                </div>
+                <button id="calculateBtn" class="bg-blue-500 text-white rounded px-2 py-1 w-full">Tính</button>
+                <!-- Giảm kích thước nút -->
             </div>
         </div>
 
-        <button id="calculateBtn" class="bg-blue-500 text-white rounded px-4 py-2 w-full">Tính</button>
-
-        <div id="result" class="mt-4 text-lg font-semibold"></div>
-        <div id="notification" class="mt-2 text-red-500"></div>
+        <div id="result" class="mt-4 text-lg font-semibold text-center"></div>
+        <div id="notification" class="mt-2 text-red-500 text-center"></div>
+        <script src="script.js" defer></script>
     </div>
-    <script src="script.js" defer></script>
 </body>
 
 </html>
